@@ -1,0 +1,85 @@
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #1D5B79; /* Cambia esto al color que desees */
+  padding: 10px;
+  z-index: 1000; /* Asegura que la barra de navegación esté en la parte superior */
+}
+
+.go-family{
+    width: 3%;
+   position: absolute;
+   top: 26px;
+  left: 90%;
+}
+.logo-family{
+    width: 10%;
+}
+.big-continer {
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: space-between;
+    padding: 30px;
+    background-color: #f0f0f0;
+    border-radius: 15px;
+    max-width: 70%;
+    margin-left: 10px;
+    
+  }
+
+  .box {
+    width: calc(20% - 5mm); /* 20% width with 5mm spacing */
+    height: 140px; /* Adjust height as needed */
+    margin-bottom: 5mm;
+    background-color: #EF6262;
+    border-radius: 15px;
+    
+   
+  }
+  .section-estadistic {
+    position: absolute;
+    top: 230px;
+    left: 78%;
+    background-color: #468B97;
+    padding: 10px;
+    border-radius: 8px;
+    width: 220px; /* Añadimos un ancho inicial */
+    text-align: center; /* Centramos el contenido */
+    font-family: 'Belleza', sans-serif;;
+    color: white;
+   
+  }
+
+  .section-estadistic h2 {
+    font-size: 18px;
+    margin-bottom: 5px;
+  }
+  
+  .section-estadistic button {
+    margin-top: 10px;
+    padding: 5px 10px;
+    font-size: 14px;
+    cursor: pointer;
+  }
+.start{
+  background-color: #F3AA60;
+  color: white;
+  border-radius: 15px;
+  border-color: #F3AA60;
+  cursor: pointer;
+}
+  /* Media query para pantallas pequeñas */
+  @media screen and (max-width: 480px) {
+    .section-estadistic {
+      width: auto; /* Cambiamos el ancho a automático para que se ajuste al contenido */
+      left: 10px; /* Ajustamos la posición izquierda */
+      right: 10px; /* Ajustamos la posición derecha */
+    }
+  }
+  
+  
+  
+  

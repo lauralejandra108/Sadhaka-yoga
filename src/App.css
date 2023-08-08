@@ -9,7 +9,7 @@ h1{
     
 }
 
-button {
+#button-family {
     width: 25%;
     font-size: 140%;
     color: white;
@@ -25,10 +25,10 @@ button {
     font-family: 'Belleza', sans-serif;;
     letter-spacing: 0.10cm;
 }
-button:hover{
+#button-family:hover{
     color: #F3AA60;
 }
-button::after{
+#button-family::after{
     content: "";
   background:white; /* color de fondo hover */
   position: absolute;
@@ -42,7 +42,7 @@ button::after{
   -webkit-transition: all 0.35s;
   transition: all 0.35s;
 }
-button:hover::after{
+#button-family:hover::after{
     left: 0;
     right: 0;
     top: 0;
