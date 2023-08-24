@@ -33,20 +33,20 @@ const Stading = ({ onClose }) => {
     checkForMatch();
   }, [secondCard]);
 
-  const flipCard = (name, number, id) => {
-    if (firstCard.name === name && firstCard.number === number) {
+  const flipCard = (id, number) => {
+    if (firstCard.id === id && firstCard.number === number) {
       return 0;
     }
-    if (!firstCard.name) {
-      setFirstCard({ name, number });
-    } else if (!secondCard.name) {
-      setSecondCard({ name, number });
+    if (!firstCard.id) {
+      setFirstCard({ id, number });
+    } else if (!secondCard.id) {
+      setSecondCard({ id, number });
     }
     return 1;
   };
 
   const checkForMatch = () => {
-    if (firstCard.name && secondCard.name) {
+    if (firstCard.id && secondCard.id) {
       const match = firstCard.id === secondCard.id;
       match ? disableCards() : unflipCards();
     }
@@ -88,7 +88,7 @@ const Stading = ({ onClose }) => {
 
         </div>
       </div>
-      <section className="section-estadistic">
+     {/*  <section className="section-estadistic">
         <h2 className="aciertos" id="estadisticas">
           Aciertos: <span id="contador-acietos">0</span>
         </h2>
@@ -99,7 +99,7 @@ const Stading = ({ onClose }) => {
           Movimientos: <span id="contador-movimientos"></span>
         </h2>
         <button className="start">iniciar juego</button>
-      </section>
+      </section> */}
       </div>
     </>
   );
