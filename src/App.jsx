@@ -1,7 +1,7 @@
 // eslint-disable-next-line no-unused-vars
-import StadingBox from './stading'; // Asegúrate de que la ruta sea correcta
 import './App.css';
 import { useState } from 'react';
+import Stading from './stading';
 
 export const App = () => {
   const [showStadingBox, setShowStadingBox] = useState(false);
@@ -17,7 +17,7 @@ export const App = () => {
     <>
      {showStadingBox
        ? (
-         <StadingBox onClose={closeStadingBox} />
+         <Stading onClose={closeStadingBox} />
          )
        : (
     <><img src="./src/assets/logo.png" alt="logo de sadhaka" className='logo' /><h1>Familia de Āsanas</h1><div className='container-family-asanas'>

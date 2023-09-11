@@ -3,17 +3,24 @@ import React, { useState, useEffect } from 'react';
 import './stading.css';
 // eslint-disable-next-line no-unused-vars
 import Card from './components/card';
-import { images } from './import';
+import { imagesStading } from './import-stading';
 
 const Stading = ({ onClose }) => {
   const [showBox, setShowBox] = useState(false);
+
   const [cards, setCards] = useState([]);
 
-  const [firstCard, setFirstCard] = useState([]);
-  const [secondCard, setSecondCard] = useState([]);
+  const [firstCard, setFirstCard] = useState({});
+  const [secondCard, setSecondCard] = useState({});
 
   const [unflippedCards, setUnflippedCards] = useState([]);
   const [disabledCards, setDisabledCards] = useState([]);
+
+  useEffect(() => {
+    return () => {
+      setCards([]);
+    };
+  }, []);
 
   const shuffleArray = (array) => {
     for (let i = array.length - 1; i > 0; i--) {
@@ -25,8 +32,8 @@ const Stading = ({ onClose }) => {
   };
 
   useEffect(() => {
-    shuffleArray(images);
-    setCards(images);
+    shuffleArray(imagesStading);
+    setCards(imagesStading);
   }, []);
 
   useEffect(() => {
@@ -69,10 +76,9 @@ const Stading = ({ onClose }) => {
 
   return (
     <>
-      {/* <img src="./src/assets/logo.png" alt="logo de sadhaka"  className='logo-family'/>
-    <img src="./src/assets/back.png" alt="salir a familia de asanas" onClick={onClose} className="go-family" /> */}
-      <div className={`Stading-box ${showBox ? 'show' : ''}`}>
-        <div className="stadingBox">
+      <img src="./src/assets/logo.png" alt="logo de sadhaka" className='logo-family'/>
+    <img src="./src/assets/back.png" alt="salir a familia de asanas" onClick={onClose} className="go-family" />
+    <div className='app'>
           <div className="big-container">
             {
             cards.map((card, index) => (
@@ -85,9 +91,8 @@ const Stading = ({ onClose }) => {
               disabledCards={disabledCards}
                />
             ))}
-
+ </div>
         </div>
-      </div>
      {/*  <section className="section-estadistic">
         <h2 className="aciertos" id="estadisticas">
           Aciertos: <span id="contador-acietos">0</span>
@@ -100,7 +105,6 @@ const Stading = ({ onClose }) => {
         </h2>
         <button className="start">iniciar juego</button>
       </section> */}
-      </div>
     </>
   );
 };

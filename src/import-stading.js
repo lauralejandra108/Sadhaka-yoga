@@ -38,7 +38,7 @@ import src37 from './name-stading-img/17.png';
 import src38 from './name-stading-img/18.png';
 import src39 from './name-stading-img/19.png';
 import src40 from './name-stading-img/20.png';
-const images = [
+const imagesStading = [
   {
     src: src1,
     asana: 'Adhomuka Svanasana',
@@ -115,31 +115,6 @@ const images = [
     id: 15
   },
   {
-    src: src16,
-    asana: 'virabhadrasana1',
-    id: 16
-  },
-  {
-    src: src17,
-    asana: 'virabhadrasana3',
-    id: 17
-  },
-  {
-    src: src18,
-    asana: 'vriksasana',
-    id: 18
-  },
-  {
-    src: src19,
-    asana: 'vriksasana',
-    id: 19
-  },
-  {
-    src: src20,
-    asana: 'vriksasana',
-    id: 20
-  },
-  {
     src: src21,
     asana: 'Adhomuka Svanasana',
     id: 1
@@ -213,32 +188,7 @@ const images = [
     src: src35,
     asana: 'virabhadrasana2',
     id: 15
-  },
-  {
-    src: src36,
-    asana: 'virabhadrasana1',
-    id: 16
-  },
-  {
-    src: src37,
-    asana: 'virabhadrasana3',
-    id: 17
-  },
-  {
-    src: src38,
-    asana: 'vriksasana',
-    id: 18
-  },
-  {
-    src: src39,
-    asana: 'vriksasana',
-    id: 19
-  },
-  {
-    src: src40,
-    asana: 'vriksasana',
-    id: 20
   }
 ];
 
-export { images };
+export { imagesStading };
