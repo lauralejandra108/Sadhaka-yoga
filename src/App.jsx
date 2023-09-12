@@ -1,28 +1,34 @@
 // eslint-disable-next-line no-unused-vars
 import './App.css';
 import { useState } from 'react';
-import Stading from './stading';
-
+import Standing from './standing';
+import Sitting from './sitting';
 export const App = () => {
-  const [showStadingBox, setShowStadingBox] = useState(false);
+  const [selectedComponent, setSelectedComponent] = useState(''); // Estado para rastrear el componente seleccionado
 
-  const toggleStadingBox = () => {
-    setShowStadingBox(!showStadingBox);
+  // Función para cambiar el componente seleccionado
+  const handleComponentChange = (componentName) => {
+    setSelectedComponent(componentName);
   };
-  const closeStadingBox = () => {
-    setShowHipOpenBox(false);
-  };
-
   return (
     <>
-     {showStadingBox
+     {selectedComponent === 'standing'
        ? (
-         <Stading onClose={closeStadingBox} />
+        <Standing />
          )
-       : (
+       : selectedComponent === 'sitting'
+         ? (
+        <Sitting />
+           )
+         : selectedComponent === 'other'
+           ? (
+        <OtherComponent />
+             )
+           : (
+
     <><img src="./src/assets/logo.png" alt="logo de sadhaka" className='logo' /><h1>Familia de Āsanas</h1><div className='container-family-asanas'>
-            <button id='button-family'className='stading' onClick={toggleStadingBox}>Posturas de pie</button>
-            <button id='button-family' className='arm-balance'>Equilibrio de brazos</button>
+            <button id='button-family'className='standing' onClick={() => handleComponentChange('standing')}>Posturas de pie</button>
+            <button id='button-family' className='arm-balance' onClick={() => handleComponentChange('sitting')}>Equilibrio de brazos</button>
             <button id='button-family' className='foot-balance'>Equilibrio de pie</button>
             <button id='button-family' className='flex-forw'>Flexión anterior</button>
             <button id='button-family' className='forward'>Flexión posterior</button>
@@ -30,7 +36,7 @@ export const App = () => {
             <button id='button-family' className='meditations'>Meditación</button>
             <button id='button-family' className='twist'>Torsión</button>
           </div></>
-         )}
+             )}
      </>
   );
 };

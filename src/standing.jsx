@@ -3,11 +3,9 @@ import React, { useState, useEffect } from 'react';
 import './stading.css';
 // eslint-disable-next-line no-unused-vars
 import Card from './components/card';
-import { imagesStading } from './import-stading';
+import { imagesStanding } from './import-standing';
 
-const Stading = ({ onClose }) => {
-  const [showBox, setShowBox] = useState(false);
-
+const Standing = ({ onClose }) => {
   const [cards, setCards] = useState([]);
 
   const [firstCard, setFirstCard] = useState({});
@@ -32,8 +30,8 @@ const Stading = ({ onClose }) => {
   };
 
   useEffect(() => {
-    shuffleArray(imagesStading);
-    setCards(imagesStading);
+    shuffleArray(imagesStanding);
+    setCards(imagesStanding);
   }, []);
 
   useEffect(() => {
@@ -109,4 +107,4 @@ const Stading = ({ onClose }) => {
   );
 };
 
-export default Stading;
+export default Standing;

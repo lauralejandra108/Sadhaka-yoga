@@ -60,11 +60,12 @@
   height: calc(100px - 10px);
   width: calc(150px - 10px);
   cursor: pointer;
-  padding-left: 45px;
+  padding-left: 20px;
 }
 .card-image {
-  height: calc(150px - 10px);
-  width: calc(200px - 10px);
+  height: calc(120px - 10px);
+  width: calc(200px - 30px);
+  border-radius: 10px;
   
 
 }
