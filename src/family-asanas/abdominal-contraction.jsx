@@ -1,10 +1,11 @@
-import React, { useState, useEffect } from 'react';
-import './stading.css';
 // eslint-disable-next-line no-unused-vars
-import Card from './components/card';
-import { imagesStanding } from './import-standing';
+import React, { useState, useEffect } from 'react';
+// eslint-disable-next-line no-unused-vars
+import Card from '../components/card';
+import { imagesSitting } from '../import-sitting';
+import '../family-asanas/style.css';
 
-const Sitting = ({ onClose }) => {
+const AbdominalContraction = ({ onClose }) => {
   const [cards, setCards] = useState([]);
 
   const [firstCard, setFirstCard] = useState({});
@@ -29,8 +30,8 @@ const Sitting = ({ onClose }) => {
   };
 
   useEffect(() => {
-    shuffleArray(imagesStanding);
-    setCards(imagesStanding);
+    shuffleArray(imagesSitting);
+    setCards(imagesSitting);
   }, []);
 
   useEffect(() => {
@@ -75,6 +76,7 @@ const Sitting = ({ onClose }) => {
     <>
       <img src="./src/assets/logo.png" alt="logo de sadhaka" className='logo-family'/>
     <img src="./src/assets/back.png" alt="salir a familia de asanas" onClick={onClose} className="go-family" />
+
     <div className='app'>
           <div className="big-container">
             {
@@ -106,4 +108,4 @@ const Sitting = ({ onClose }) => {
   );
 };
 
-export default Sitting;
+export default AbdominalContraction;

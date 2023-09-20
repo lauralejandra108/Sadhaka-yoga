@@ -15,6 +15,8 @@
   left: 90%;
 }
 .logo-family{
+position: relative;
+left: 45%;
     width: 10%;
 }
 
@@ -51,27 +53,36 @@
   border-color: #F3AA60;
   cursor: pointer;
 }
-
+.big-container{
+  
+  display: grid;
+  gap: 0px 0;
+  grid-template-columns: repeat(auto-fill, minmax(170px, 1fr));
+  max-width: 100%;
+}
 
 
 .card {
-  display: inline-block;
-  margin: 10px;
-  height: calc(100px - 10px);
-  width: calc(150px - 10px);
+  
+  width: 100%; /* Ajustar automáticamente al ancho de la columna */
+  height: auto;
+  transform: scale(0.9); /* Escalar las tarjetas */
   cursor: pointer;
-  padding-left: 20px;
+
+   
 }
 .card-image {
-  height: calc(120px - 10px);
-  width: calc(200px - 30px);
+ width: 100%;
+  height: auto;
   border-radius: 10px;
-  
-
+  max-width: 100%;
+  height: auto;
+  width: 170px; /* Cambiar el tamaño de las imágenes dentro de las tarjetas */
+  height: 150px; 
 }
 
 .card:hover {
-  transform: scale(0.98);
+  transform: scale(0.90);
 }
 
 
@@ -86,7 +97,37 @@
       right: 10px; /* Ajustamos la posición derecha */
     }
   }
+  .standing-h1{
+    font-size: 35px;
+    color:  #F3AA60;
+    background-color: #468B97;
+    width: 98%;
+    height: 80px;
+    
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    text-align: center;
+  }
+  .app{
+    display: flex; 
+    width: 98%;
+    height: auto;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius:10px ;
+    
+  }
+  @media (max-width: 767px) {
+    .big-container {
+      gap: 0px 0;
+  grid-template-columns: repeat(auto-fill, minmax(170px, 1fr));
+      grid-template-columns: 1fr; /* Cambiar a una sola columna en dispositivos móviles */
+    }
+    .Card,.card-image {
+      transform: scale(0.9); /* Restaurar el tamaño original en dispositivos móviles */
+      transform-origin: center top; /* Cambiar el punto de origen de la escala de nuevo */
+    }
+  }
   
-  
+
   
   
