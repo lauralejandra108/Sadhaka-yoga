@@ -1,12 +1,19 @@
 // eslint-disable-next-line no-unused-vars
 import './App.css';
 import { useState } from 'react';
+// eslint-disable-next-line no-unused-vars
 import Standing from './family-asanas/standing';
+// eslint-disable-next-line no-unused-vars
 import Sitting from './family-asanas/sitting';
+// eslint-disable-next-line no-unused-vars
 import ForwardExtension from './family-asanas/forward-extension';
+// eslint-disable-next-line no-unused-vars
 import AbdominalContraction from './family-asanas/abdominal-contraction';
+// eslint-disable-next-line no-unused-vars
 import Backbends from './family-asanas/Backbends';
-import Inversions from './family-asanas/Inversions';
+// eslint-disable-next-line no-unused-vars
+import Inverted from './family-asanas/ inverted';
+// eslint-disable-next-line no-unused-vars
 import Twist from './family-asanas/Twist';
 
 export const App = () => {
@@ -38,13 +45,13 @@ export const App = () => {
                ? (
         <Backbends />
                  )
-               : selectedComponent === 'inversions'
+               : selectedComponent === 'inverted'
                  ? (
-        <Iversions />
+        <Inverted />
                    )
                  : selectedComponent === 'twist'
                    ? (
-        <twist />
+        <Twist />
                      )
                    : (
 
@@ -54,7 +61,7 @@ export const App = () => {
             <button id='button-family' className='forward-extension' onClick={() => handleComponentChange('forwardExtension')}>Flexión anterior</button>
             <button id='button-family' className='flex-forw' onClick={() => handleComponentChange('abdominalContraction')}>Contracción abdominal</button>
             <button id='button-family' className='backbends' onClick={() => handleComponentChange('backbends')}>Flexiones hacia atrás</button>
-            <button id='button-family' className='inversions' onClick={() => handleComponentChange('inversions')}>Invertidas</button>
+            <button id='button-family' className='inverted' onClick={() => handleComponentChange('inverted')}>Invertidas</button>
             <button id='button-family' className='twist' onClick={() => handleComponentChange('twist')}>Torsión</button>
           </div></>
                      )}

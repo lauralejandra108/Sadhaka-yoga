@@ -2,7 +2,7 @@
 import React, { useState, useEffect } from 'react';
 // eslint-disable-next-line no-unused-vars
 import Card from '../components/card';
-import { imagesSitting } from '../import-sitting';
+import { imagesTwsit } from '../import-twist';
 import '../family-asanas/style.css';
 
 const Twist = ({ onClose }) => {
@@ -30,8 +30,8 @@ const Twist = ({ onClose }) => {
   };
 
   useEffect(() => {
-    shuffleArray(imagesSitting);
-    setCards(imagesSitting);
+    shuffleArray(imagesTwsit);
+    setCards(imagesTwsit);
   }, []);
 
   useEffect(() => {

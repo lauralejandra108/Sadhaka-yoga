@@ -116,6 +116,38 @@ left: 45%;
     border-bottom-right-radius:10px ;
     
   }
+  /* Estilo para la animación de felicitaciones */
+.congrats-animation-enter {
+  opacity: 0;
+  transform: translateY(-20px);
+}
+.congrats-animation-enter-active {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 300ms, transform 300ms;
+}
+.congrats-animation-exit {
+  opacity: 1;
+  transform: translateY(0);
+}
+.congrats-animation-exit-active {
+  opacity: 0;
+  transform: translateY(-20px);
+  transition: opacity 300ms, transform 300ms;
+}
+
+/* Estilos adicionales según tus preferencias */
+.congrats-container {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: green;
+  color: white;
+  padding: 20px;
+  border-radius: 5px;
+  text-align: center;
+}
   @media (max-width: 767px) {
     .big-container {
       gap: 0px 0;
